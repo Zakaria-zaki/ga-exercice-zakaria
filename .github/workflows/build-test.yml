@@ -1,7 +1,19 @@
 name: Workflow
 
-jobs:
-
 on:
-  branch_protection_rule:
-    types: [created, deleted]
+  push:
+    branches:
+      - 'dev'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm ci
