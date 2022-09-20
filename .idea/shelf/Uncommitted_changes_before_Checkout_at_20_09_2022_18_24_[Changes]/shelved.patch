@@ -1,0 +1,19 @@
+Index: .github/workflows/build-test.yml
+===================================================================
+diff --git a/.github/workflows/build-test.yml b/.github/workflows/build-test.yml
+--- a/.github/workflows/build-test.yml	
++++ b/.github/workflows/build-test.yml	
+@@ -1,7 +1,9 @@
+ name: Workflow
+ 
++on:
++  push:
++    branches:
++      - 'dev'
++
+ jobs:
+ 
+-on:
+-  branch_protection_rule:
+-    types: [created, deleted]
+\ No newline at end of file
