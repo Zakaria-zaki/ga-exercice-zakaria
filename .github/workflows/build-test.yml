@@ -31,10 +31,6 @@ jobs:
         with:
           node-version: 16
 
-  #      - run: npm ci
-  #      - run: npm run build
-  #      - run: npm test
-
   run_if:
     if: github.event_name != 'pull_request'
     name: build-test-2
