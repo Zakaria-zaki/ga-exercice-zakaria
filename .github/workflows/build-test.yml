@@ -1,34 +1,15 @@
-name: Two jobs running manually from Github
-
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Test manual run'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
-      tags:
-        description: 'Test tags'
-        required: false
-        type: boolean
-  push:
-  pull_request:
-    types: [ opened ]
+on: [workflow_dispatch]
 
 jobs:
-  build-test:
+  cli_login_job:
     runs-on: ubuntu-latest
-
+    name: CLI Login Job
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: CLI for Microsoft 365 Login
+        uses: ./
+        id: login
         with:
-          node-version: 16
           ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
