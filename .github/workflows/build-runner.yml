@@ -8,6 +8,7 @@ jobs:
     defaults:
       run:
         working-directory: node-app
+
     steps:
       - uses: actions/checkout@v3
 
@@ -19,7 +20,3 @@ jobs:
 
       - name: Test
       - run: npm test
-defaults:
-  run:
-    shell: bash
-    working-directory: scripts

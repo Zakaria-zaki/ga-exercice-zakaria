@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144509f4-6756-421f-9c35-3dfe2394caaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build-runner.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build-runner.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build-runner.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
       <workItem from="1663251468325" duration="702000" />
       <workItem from="1663689594956" duration="5035000" />
       <workItem from="1663765296931" duration="2257000" />
-      <workItem from="1663768857678" duration="3011000" />
+      <workItem from="1663768857678" duration="3166000" />
     </task>
     <servers />
   </component>
