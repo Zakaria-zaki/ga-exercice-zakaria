@@ -1,9 +1,22 @@
-name: Workflow
+name: Two jobs running manually from Github
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Test manual run'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      tags:
+        description: 'Test tags'
+        required: false
+        type: boolean
   push:
-    branches:
-      - 'dev'
 
 jobs:
   build-test:
@@ -15,5 +28,3 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
-      - run: npm ci

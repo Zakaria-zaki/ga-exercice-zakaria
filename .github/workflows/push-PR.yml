@@ -1,0 +1,11 @@
+name: Workflow
+
+on: [push]
+
+jobs:
+  job1:
+    name: test 1
+  job2:
+    name: test 2
+
+
